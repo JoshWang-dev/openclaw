@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josh · GitHub 空间 (中英)</title>
+    <style>
+        /* 全局重置 + 米色背景 + 完全居中 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f0e6;  /* 柔和米色，与之前一致 */
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 
+                         'Helvetica Neue', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;        /* 垂直居中 */
+            justify-content: center;     /* 水平居中 */
+            line-height: 1.5;
+        }
+
+        .container {
+            text-align: center;          /* 内部所有文字居中 */
+            padding: 1.5rem 2.5rem;
+            background-color: transparent; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            border-radius: 24px;
+            max-width: 90%;
+        }
+
+        /* 第一行：这是 Josh 的GitHub空间 */
+        .line-first {
+            font-size: 2.2rem;           
+            font-weight: 500;
+            color: #3e3a36;               
+            letter-spacing: 0.02em;
+            margin-bottom: 0.25rem;        /* 与第二行间距 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* 第二行：他目前空的！ */
+        .line-second {
+            font-size: 2.2rem;             
+            font-weight: 500;
+            color: #3e3a36;                
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0.75rem;         /* 给英文留出距离（小二号变小后视觉仍舒适） */
+        }
+
+        /* 新增第三行：英文小二号 (相对于主字体小两号 ≈ 1.6rem) */
+        .line-english {
+            font-size: 1.6rem;              /* 小2号 ≈ 2.2rem -> 1.6rem */
+            font-weight: 400;
+            color: #5f5b57;                  /* 稍浅一点的暖灰，层次柔和 */
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-top: 1px dashed rgba(120, 100, 80, 0.15);  /* 极淡分隔线，若有若无 */
+            padding-top: 0.75rem;             /* 与线条/上方拉开距离 */
+            margin-top: 0.25rem;
+            opacity: 0.9;
+        }
+
+        /* 窄屏适度缩小所有文字 */
+        @media (max-width: 480px) {
+            .line-first, .line-second {
+                font-size: 1.8rem;
+            }
+            .line-english {
+                font-size: 1.4rem;            /* 保持小两号比例 */
+            }
+            .container {
+                padding: 1rem 1.5rem;
+            }
+        }
+
+        /* 可选：英文斜体，增加一点区分，但不强求 */
+        .line-english i {
+            font-style: italic;
+        }
+        /* 实际直接用普通字体，无需额外斜体，保持干净 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 第一行 (原) -->
+        <div class="line-first">这是 Josh 的 GitHub空间</div>
+        <!-- 第二行 (原) -->
+        <div class="line-second">它目前是空的！</div>
+        <!-- 新增第三行：小二号英文，完全符合“下面用小2号的字体，用英文写” -->
+        <div class="line-english">This is Josh's GitHub space, it's currently empty.</div>
+        <!-- 依然保持极简，只有三行，没有任何多余元素 -->
+    </div>
+
+    <!-- 说明：在原有基础上优化，增加英文小字，米色背景/居中保持不变。 
+         小二号相对于主字体2.2rem减小到1.6rem，视觉舒适。 -->
+</body>
+</html>
